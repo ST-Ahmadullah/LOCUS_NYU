@@ -88,9 +88,7 @@ public class Edit {
 	@AfterMethod(alwaysRun = true)
 	public void tearDown() {
 		System.out.println("🔄 Closing the browser...");
-		if (driver != null) {
-			driver.quit();
-		}
+		BaseClass.quitWebDriver();
 		System.out.println("✅ Browser closed successfully.");
 	}
 }

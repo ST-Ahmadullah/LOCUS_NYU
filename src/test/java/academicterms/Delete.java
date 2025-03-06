@@ -58,7 +58,7 @@ public class Delete {
 	}
 
 	@Test
-	public void testDeleteSpecificAcademicTerm() {
+	public void delete() {
 		try {
 			System.out.println("📌 Navigating to 'Academic Terms'...");
 			wait.until(ExpectedConditions.elementToBeClickable(By.id(MENU_BUTTON))).click();
@@ -92,9 +92,7 @@ public class Delete {
 	@AfterMethod(alwaysRun = true)
 	public void tearDown() {
 		System.out.println("🔄 Closing the browser...");
-		if (driver != null) {
-			driver.quit();
-		}
+		BaseClass.quitWebDriver();
 		System.out.println("✅ Browser closed successfully.");
 	}
 }
